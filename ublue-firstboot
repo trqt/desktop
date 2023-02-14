@@ -55,8 +55,8 @@ if [ "$?" != 0 ] ; then
 fi
 echo "25"
 
-echo "# Installing Firefox"
-/usr/bin/flatpak install --user --noninteractive flathub org.mozilla.firefox
+echo "# Installing Librewolf"
+/usr/bin/flatpak install --user --noninteractive flathub io.gitlab.librewolf-community
 if [ "$?" != 0 ] ; then
         zenity --error \
           --text="Installing Firefox Failed"
@@ -73,14 +73,6 @@ if [ "$?" != 0 ] ; then
 fi
 echo "40"
 
-echo "# Installing Extension Manager"
-/usr/bin/flatpak install --user --noninteractive flathub com.mattjakeman.ExtensionManager
-if [ "$?" != 0 ] ; then
-        zenity --error \
-          --text="Installing Extension Manager Failed"
-        exit 1
-fi
-echo "50"
 
 echo "# Installing LibreOffice"
 /usr/bin/flatpak install --user --noninteractive flathub org.libreoffice.LibreOffice
@@ -130,7 +122,6 @@ echo "100"
 echo "# Reticulating Final Splines"
 mkdir -p "$HOME"/.config/ublue/
 touch "$HOME"/.config/ublue/firstboot-done
-cp -n /etc/justfile "$HOME"/.justfile
 
 ) | 
      
