@@ -1,6 +1,6 @@
 # My Fedora Immutable Desktop
 
-[![build-desktop](https://github.com/tqrt/desktop/actions/workflows/build.yml/badge.svg)](https://github.com/trqt/desktop/actions/workflows/build.yml)
+[![build-desktop](https://github.com/trqt/desktop/actions/workflows/build.yml/badge.svg)](https://github.com/trqt/desktop/actions/workflows/build.yml)
 
 A Fedora Sericea customized image.
 
