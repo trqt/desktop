@@ -15,5 +15,4 @@ RUN rpm-ostree override remove firefox firefox-langpacks && \
     systemctl enable rpm-ostreed-automatic.timer && \
     systemctl enable flatpak-automatic.timer && \
     systemctl enable tor.service && \
-    systemctl enable dnscrypt-proxy.service && \
     ostree container commit
