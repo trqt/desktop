@@ -10,9 +10,8 @@ COPY etc /etc
 COPY ublue-firstboot /usr/bin
 
 RUN rpm-ostree override remove firefox firefox-langpacks && \
-    rpm-ostree install distrobox fish flatpak-builder zenity dnscrypt-proxy tor doas && \
+    rpm-ostree install distrobox fish flatpak-builder zenity doas && \
     sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
     systemctl enable rpm-ostreed-automatic.timer && \
     systemctl enable flatpak-automatic.timer && \
-    systemctl enable tor.service && \
     ostree container commit
