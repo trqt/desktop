@@ -7,7 +7,7 @@ FROM quay.io/fedora-ostree-desktops/sericea:${FEDORA_MAJOR_VERSION}
 
 COPY etc /etc
 
-COPY ublue-firstboot /usr/bin
+COPY setup-firstboot /usr/bin
 
 RUN rpm-ostree override remove firefox firefox-langpacks && \
     rpm-ostree install distrobox fish flatpak-builder zenity doas && \

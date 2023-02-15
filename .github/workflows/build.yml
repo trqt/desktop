@@ -1,4 +1,4 @@
-name: build-ublue
+name: build-desktop
 on:
   pull_request:
     branches:
