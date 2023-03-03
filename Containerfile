@@ -5,7 +5,7 @@ ARG FEDORA_MAJOR_VERSION=38
 FROM quay.io/fedora-ostree-desktops/sericea:${FEDORA_MAJOR_VERSION}
 # See https://pagure.io/releng/issue/11047 for final location
 
-COPY etc /etc
+COPY usr /usr
 
 COPY setup-firstboot /usr/bin
 
