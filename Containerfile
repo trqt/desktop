@@ -14,5 +14,4 @@ RUN rpm-ostree override remove firefox firefox-langpacks && \
     rpm-ostree install jetbrains-mono-fonts ibm-plex-mono-fonts material-icons-fonts redhat-display-fonts redhat-text-fonts redhat-mono-fonts comic-neue-fonts && \
     sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
     systemctl enable rpm-ostreed-automatic.timer && \
-    systemctl enable flatpak-automatic.timer && \
     ostree container commit
